@@ -14,13 +14,22 @@
   ?>
 
   <div class="wrap container" role="document">
+    <div class="row">
+      <div class="span12 page-header">
+        <?php get_template_part('templates/page', 'header'); ?>
+      </div>
+    </div>
     <div class="content row">
       <div class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
+        <div class="well">
+          <?php include roots_template_path(); ?>
+        </div>
       </div><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
       <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-        <?php include roots_sidebar_path(); ?>
+        <div class="well well-sidebar">
+          <?php include roots_sidebar_path(); ?>
+        </div>
       </aside><!-- /.sidebar -->
       <?php endif; ?>
     </div><!-- /.content -->
