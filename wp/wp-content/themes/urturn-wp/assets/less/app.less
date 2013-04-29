@@ -1,0 +1,267 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+@redButton:             #F21400;
+@redButtonDark:         #C30B01;
+@baseFontSize:          15px;
+
+/* ==========================================================================
+   Font
+   ========================================================================== */
+// Urturn Typography
+@font-face{
+  font-family: "HermesCond";
+  font-weight: 400;
+  src: url('../fonts/hermescond-regular-webfont.eot');
+  src: url('../fonts/hermescond-regular-webfont.svg') format('svg');
+  src: url('../fonts/hermescond-regular-webfont.ttf') format('truetype');
+  src: url('../fonts/hermescond-regular-webfont.woff') format('woff');
+}
+
+@font-face{
+  font-family: "HermesCond";
+  font-weight: 200;
+  src: url('../fonts/hermescond-light-webfont.eot');
+  src: url('../fonts/hermescond-light-webfont.svg') format('svg');
+  src: url('../fonts/hermescond-light-webfont.ttf') format('truetype');
+  src: url('../fonts/hermescond-light-webfont.woff') format('woff');
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+   padding-top: 80px;
+}
+@media (max-width: 979px) {
+   body {
+      padding-top: 0;
+   }
+}
+h1, h2{
+  font-family: "HermesCond";
+}
+h1 { font-size: @baseFontSize * 2.6; } // ~38px
+h2 { font-size: @baseFontSize * 1.719; font-weight: 400;} // ~28px
+
+/* =============================================================================
+   Urturn
+   ========================================================================== */
+.wdPostContainer{
+   margin: 10px 0;
+   max-width: 500px;
+   border:1px solid #cdcdcd;
+}
+
+.tags-list{
+    .tag a{
+       display: inline-block;
+       padding: 0.1em 0.3em;
+       background-color: @redButton;
+       color: white;
+       font-size: @baseFontSize * 0.9;
+       margin-right: 0.3em;
+       &:hover{
+         background-color: @redButtonDark;
+         text-decoration: none;
+       }
+    }
+}
+
+.share-options{
+   margin: 3px;
+}
+
+.main-content{
+   max-width: 580px;
+}
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+.banner { }
+
+.form-search{
+   margin: 0;
+}
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar-content {
+    margin-top: 50px;
+    padding-left: 30px;
+    margin-left: 20px;
+    border-left: 1px solid #cdcdcd;
+    h3 {
+        line-height: 1.2em;
+        font-size: 1.3em;
+    }
+    ul {
+        list-style: none;
+        margin-left: 0;
+    }
+    .widget {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dedede;
+    }
+    @media (max-width: 767px) {
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+}
+
+/* ==========================================================================
+   ZenDesk
+   ========================================================================== */
+
+.zendesk_button {
+  height: 2em;
+  padding: 0 0.75em;
+  display: block;
+  margin-bottom: 1em;
+  @media (min-width: 767px){
+    position: fixed;
+    left: 0;
+    bottom: 32px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  
+  color: rgb(255, 255, 255);
+  font-size: 1.1428em;
+  line-height: 2em;
+  
+  background: rgb(51, 51, 51);
+
+}
+
+.zendesk_button:hover,
+.zendesk_button:active,
+.zendesk_button:focus {
+  color: rgb(255, 255, 255);
+  background: rgb(230, 15, 0);
+  text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+.footer-menu{
+    ul{
+        margin-top: 2em;
+        list-style: none;
+    }
+    a{
+        font-family: "HermesCond";
+        font-weight: 400;
+        display: block;
+        padding: 10px 0;
+        margin: 0;
+        color: #cdcdcd;
+        text-decoration: none;
+        &:hover{
+            color: white;
+            .blog{
+                background-position: 0 -90px;
+            }
+
+            .contact{
+                background-position: 0 -120px;
+            }
+
+            .dev{
+                background-position: 0 -150px;
+            }
+        }
+    }
+}
+.footer-menu i{
+    background: url('../img/icone_contact_30px.png');
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin-top: -5px;
+    margin-right: 15px;
+
+    &.blog{
+        background-position: 0 0;
+    }
+
+    &.contact{
+        background-position: 0 -30px;
+    }
+
+    &.dev{
+        background-position: 0 -60px;
+    }
+}
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+}

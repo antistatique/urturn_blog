@@ -2,8 +2,8 @@
 /**
  * Enable theme features
  */
-add_theme_support('root-relative-urls');    // Enable relative URLs
-add_theme_support('rewrites');              // Enable URL rewrites
+// add_theme_support('root-relative-urls');    // Enable relative URLs
+// add_theme_support('rewrites');              // Enable URL rewrites
 add_theme_support('h5bp-htaccess');         // Enable HTML5 Boilerplate's .htaccess
 add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
@@ -22,7 +22,7 @@ define('POST_EXCERPT_LENGTH', 40);
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'span9';
+    $class = 'span8';
   } else {
     // Classes on full width pages
     $class = 'span12';
@@ -35,7 +35,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return 'span3';
+  return 'span4';
 }
 
 /**

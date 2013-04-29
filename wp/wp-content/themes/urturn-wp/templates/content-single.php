@@ -7,12 +7,21 @@
       <div class="entry-content">
         <?php the_content(); ?>
       </div>
-      <footer>
-        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-        <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
+      <footer class="clearfix">
+        <div class="tags-list pull-left">
+          <?php the_tags('<span class="tag">','</span><span class="tag">','</span>'); ?>
+        </div>
+        <div class="share-options pull-right">
+          <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_default_style">
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>
+          </div>
+          <!-- AddThis Button END -->
+        </div>
       </footer>
+      <hr/>
     </section>
-    <hr/>
     <section>
       <?php comments_template('/templates/comments.php'); ?>
     </section>

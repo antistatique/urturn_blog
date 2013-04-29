@@ -34,8 +34,11 @@
 
 <?php if (!have_comments() && !comments_open() && !is_page() && post_type_supports(get_post_type(), 'comments')) : ?>
   <section id="comments">
-    <div class="alert">
-      <?php _e('Comments are closed.', 'roots'); ?>
+    <div class="well">
+      <h4>Feedback</h4>
+      <p>We love feedback! Let <a href="https://twitter.com/UrturnOfficial">@UrturnOfficial</a> know on Twitter.
+            We will read your mention. </p>
+      <p>If you find a bug or have any questions, give us <a href="#feedback">feedback</a>.</p>
     </div>
   </section><!-- /#comments -->
 <?php endif; ?>
